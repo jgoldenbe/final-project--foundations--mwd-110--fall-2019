@@ -1,0 +1,323 @@
+$nav--background--color: #000000be;
+
+* {
+   overflow-x: hidden;
+}
+
+html {
+   scroll-behavior: smooth;
+   overflow-y: hidden;
+   background-color: black;
+}
+
+.bgContainer {
+   position: absolute;
+   z-index: -1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-family: 'Titillium Web', sans-serif;
+}
+
+p {
+   font-family: Lato, serif;
+}
+
+#heroImg {
+   width: 100vw;
+}
+
+nav {
+   position: fixed;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   width: 100vw;
+   background-color: $nav--background--color;
+   box-shadow: 0 8px 40px black;
+}
+
+#logoContainer {
+   padding: 4px 10px;
+
+   img {
+      width: 45px;
+      animation-duration: 10s;
+   }
+}
+
+#navList {
+   display: flex;
+   flex-direction: row;
+}
+
+.navItem {
+   padding: 20px 0;
+}
+
+.navLink {
+   padding: 19px 20px;
+   text-decoration: none;
+   color: white;
+   transition-duration: 0.4s;
+
+   &:hover {
+      background-color: rgb(194, 194, 194);
+      color: black;
+   }
+}
+
+main {
+   display: flex;
+   align-self: center;
+   justify-content: center;
+   margin: 6vw 0 3vw;
+}
+
+#logoHeroContainer {
+   margin: 5vw;
+   text-align: center;
+   overflow-y: hidden;
+
+   img {
+      z-index: -1;
+      margin: 20px 40px;
+      overflow-y: hidden;
+      width: 70vw;
+      animation-duration: 2.5s;
+   }
+}
+
+section {
+   width: 100vw;
+}
+
+#about {
+   z-index: -1;
+   display: flex;
+   justify-content: flex-end;
+   margin-bottom: -4vw;
+}
+
+#aboutBGContainer {
+   z-index: -1;
+   display: flex;
+   width: 100vw;
+   background-color: black;
+
+   #top {
+      position: absolute;
+      width: 100vw;
+      z-index: -1;
+      background-color: black;
+   }
+
+   #person {
+      z-index: -1;
+      width: 25vw;
+      height: 40vw;
+      margin-left: 10px;
+      margin-top: 10vw;
+      mix-blend-mode: screen;
+      opacity: 0.5;
+      position: absolute;
+   }
+
+   #bottom {
+      position: absolute;
+      z-index: -1;
+      width: 100vw;
+      mix-blend-mode: darken;
+   }
+}
+
+#aboutMe {
+   width: 60%;
+   color: white;
+   margin: 15vw 16vw 15vw 6vw;
+   background-color: rgba(0, 0, 0, 0.9);
+   border-radius: 16px;
+   box-shadow: 0 0 40px 25px #000;
+
+   h2 {
+      font-size: 2.5vw;
+      padding: 10px;
+      font-weight: 600;
+   }
+
+   p {
+      font-size: 1.6vw;
+      padding: 10px;
+   }
+}
+
+#portfolioSection {
+   width: 100vw;
+}
+
+#portfolioBGContainer {
+   img {
+      position: absolute;
+      width: 100vw;
+      z-index: -1;
+   }
+}
+
+#portfolio {
+   margin-top: 8vw;
+   text-align: center;
+
+   h2 {
+      color: white;
+      font-size: 2.5vw;
+      font-weight: 600;
+      overflow: hidden;
+   }
+
+   p {
+      color: white;
+   }
+
+   #galleryContainer {
+      margin: 5vw 10vw;
+      display: flex;
+      flex-flow: wrap;
+      flex-direction: row;
+      justify-content: center;
+      background-color: #000;
+      border-radius: 25px;
+
+      div {
+         padding: 20px;
+      }
+
+      div > img {
+         width: 300px;
+      }
+
+      div > p > a {
+         width: 100%;
+         text-decoration: none;
+         color: black;
+      }
+
+      div > p {
+         background-color: white;
+         padding: 10px;
+         width: 60%;
+         text-align: center;
+         margin: auto;
+         border-radius: 10px;
+         transition-delay: 0.2s;
+
+         &:hover {
+            background-color: gray;
+            color: white;
+         }
+      }
+   }
+}
+
+#contact {
+   padding-top: 80px;
+
+   #social {
+      text-align: center;
+   }
+
+   #socialIconContainer {
+      padding: 10vw 5vw;
+
+      .socialIcon {
+         width: 8vw;
+      }
+   }
+
+   h2 {
+      font-size: 3vw;
+      font-weight: 600;
+      color: white;
+      padding: 3vw 5vw;
+   }
+
+   .socialIcon {
+      padding: 0 1.5vw 0 0;
+   }
+}
+
+#contactImg {
+   position: absolute;
+   z-index: -1;
+   width: 100vw;
+   background-color: black;
+}
+
+@media only screen and (max-width: 1420px) {
+   html {
+      overflow-y: scroll;
+   }
+}
+
+@media only screen and (max-width: 1000px) {
+   #portfolio {
+      margin-top: 18vw;
+
+      h2 {
+         font-size: 3vw;
+      }
+   }
+
+   #aboutMe {
+      width: 75%;
+
+      h2 {
+         font-size: 3vw;
+      }
+
+      p {
+         font-size: 2vw;
+      }
+   }
+}
+
+@media only screen and (max-width: 500px) {
+   #about {
+      width: 100%;
+
+      #aboutBGContainer {
+         width: 10vw;
+      }
+
+      #aboutMe {
+         h2 {
+            font-size: 4vw;
+         }
+
+         p {
+            font-size: 3vw;
+         }
+      }
+   }
+
+   #portfolio {
+      h2 {
+         font-size: 3vw;
+      }
+   }
+
+   main {
+      margin-top: 15vw;
+   }
+
+   #galleryContainer {
+      div > img {
+         width: 200px !important;
+      }
+   }
+}
